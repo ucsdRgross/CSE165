@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.21221542, g: 0.60536855, b: 1.1251209, a: 1}
+  m_IndirectSpecularColor: {r: 0.21174768, g: 0.60281706, b: 1.1241385, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -232,10 +232,13 @@ PrefabInstance:
       addedObject: {fileID: 1755313248}
     - targetCorrespondingSourceObject: {fileID: 482130, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1369592044}
+      addedObject: {fileID: 1054052734}
     - targetCorrespondingSourceObject: {fileID: 482130, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1380958602}
+    - targetCorrespondingSourceObject: {fileID: 482130, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1369592044}
     - targetCorrespondingSourceObject: {fileID: 487254, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1139641977}
@@ -245,6 +248,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 487254, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 384678335}
+    - targetCorrespondingSourceObject: {fileID: 487254, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1836776503}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
 --- !u!1001 &292823030
@@ -357,7 +363,7 @@ GameObject:
   - component: {fileID: 384678337}
   - component: {fileID: 384678336}
   m_Layer: 0
-  m_Name: finger
+  m_Name: RightFinger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -486,9 +492,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   head: {fileID: 154201229}
-  leftHand: {fileID: 1751183427}
-  rightHand: {fileID: 1890268341}
+  leftAnchor: {fileID: 1751183427}
+  rightAnchor: {fileID: 1890268341}
+  leftHand: {fileID: 1380958601}
+  rightHand: {fileID: 998679427}
   precision_distance: 0.1
+  palm_down_precision: 0.1
 --- !u!4 &537065817
 Transform:
   m_ObjectHideFlags: 0
@@ -918,7 +927,7 @@ GameObject:
   - component: {fileID: 998679430}
   - component: {fileID: 998679429}
   m_Layer: 0
-  m_Name: Capsule
+  m_Name: RightHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -934,10 +943,9 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7071068, z: 0.7071068, w: 0}
   m_LocalPosition: {x: 0, y: -0.036586285, z: -0.104783535}
-  m_LocalScale: {x: 0.05801839, y: 0.073400706, z: 0.101976916}
+  m_LocalScale: {x: 0.05801839, y: 0.073400706, z: 0.10197693}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1836776503}
+  m_Children: []
   m_Father: {fileID: 1890268341}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!136 &998679429
@@ -1026,7 +1034,7 @@ GameObject:
   - component: {fileID: 1054052736}
   - component: {fileID: 1054052735}
   m_Layer: 0
-  m_Name: Capsule (1)
+  m_Name: LeftThumb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1040,13 +1048,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1054052733}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.2141422, y: 0, z: 0, w: 0.97680247}
-  m_LocalPosition: {x: 0, y: -0.31, z: 0.436}
-  m_LocalScale: {x: 0.5341673, y: 0.50267607, z: 0.36905825}
+  m_LocalRotation: {x: 0, y: 0.8660254, z: 0.5, w: 0}
+  m_LocalPosition: {x: 0, y: 0.007877111, z: -0.12753773}
+  m_LocalScale: {x: 0.030992383, y: 0.0394108, z: 0.03579056}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1380958602}
-  m_LocalEulerAnglesHint: {x: 24.73, y: 0, z: 0}
+  m_Father: {fileID: 1751183427}
+  m_LocalEulerAnglesHint: {x: -60, y: 180, z: 0}
 --- !u!136 &1054052735
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1228,7 +1236,7 @@ GameObject:
   - component: {fileID: 1369592046}
   - component: {fileID: 1369592045}
   m_Layer: 0
-  m_Name: finger
+  m_Name: LeftFinger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1335,7 +1343,7 @@ GameObject:
   - component: {fileID: 1380958604}
   - component: {fileID: 1380958603}
   m_Layer: 0
-  m_Name: Capsule
+  m_Name: LeftHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1351,10 +1359,9 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7071068, z: 0.7071068, w: 0}
   m_LocalPosition: {x: 0, y: -0.036586285, z: -0.104783535}
-  m_LocalScale: {x: 0.058019985, y: 0.0734, z: 0.101980016}
+  m_LocalScale: {x: 0.05801998, y: 0.0734, z: 0.10198003}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1054052734}
+  m_Children: []
   m_Father: {fileID: 1751183427}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!136 &1380958603
@@ -1641,7 +1648,7 @@ GameObject:
   - component: {fileID: 1836776505}
   - component: {fileID: 1836776504}
   m_Layer: 0
-  m_Name: Capsule (1)
+  m_Name: RightThumb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1655,13 +1662,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1836776502}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.2141422, y: 0, z: 0, w: 0.97680247}
-  m_LocalPosition: {x: 0, y: -0.31, z: 0.436}
-  m_LocalScale: {x: 0.5341673, y: 0.50267607, z: 0.36905825}
+  m_LocalRotation: {x: 0, y: 0.8660254, z: 0.5, w: 0}
+  m_LocalPosition: {x: 0, y: 0.007875681, z: -0.12753773}
+  m_LocalScale: {x: 0.030991534, y: 0.039410815, z: 0.035789665}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 998679428}
-  m_LocalEulerAnglesHint: {x: 24.73, y: 0, z: 0}
+  m_Father: {fileID: 1890268341}
+  m_LocalEulerAnglesHint: {x: -60, y: 180, z: 0}
 --- !u!136 &1836776504
 CapsuleCollider:
   m_ObjectHideFlags: 0
